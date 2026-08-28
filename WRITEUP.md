@@ -209,20 +209,23 @@ internet users.
 
 ## Evaluation
 
-The NIST evaluation set began with ten questions and now contains thirteen after
-adding three additional out-of-scope refusal cases:
+The NIST evaluation set began with ten questions and now contains sixteen after
+adding three additional out-of-scope refusals plus explicit empty-query,
+cross-document, and conflicting-source edge cases:
 
 | Category | Count |
 | --- | ---: |
 | Single-document facts | 3 |
 | Exact identifier | 1 |
-| Cross-document synthesis | 2 |
+| Cross-document synthesis | 3 |
 | Document comparison | 1 |
 | Multi-hop reasoning | 1 |
 | Out of scope | 4 |
 | Version handling | 1 |
+| Empty-query validation | 1 |
+| Conflicting-source handling | 1 |
 
-The recorded deterministic run achieved expected-source Hit@5 on 13/13 questions,
+The recorded deterministic run achieved expected-source Hit@5 on 16/16 questions,
 including both required sources for the cross-document and version-handling cases.
 All four out-of-scope questions were refused. This result establishes source recall
 and basic refusal behavior for this small labeled set; it does not establish that
@@ -239,7 +242,7 @@ so the suite is deterministic and does not consume API tokens.
 
 Evaluation limitations:
 
-- thirteen questions are too few to establish broad retrieval quality;
+- sixteen questions are too few to establish broad retrieval quality;
 - Hit@5 does not measure ranking quality below the cutoff;
 - expected answer points are not yet scored automatically;
 - citation support is not judged by an entailment model or human double review; and
@@ -317,7 +320,7 @@ The current implementation has several deliberate and observed limitations:
 - **Limited adversarial-file containment.** File signatures, size limits, symbolic
   links, and malformed inputs are handled, but parsers do not yet run in isolated
   workers with strict CPU and memory quotas.
-- **Small evaluation set.** Thirteen questions are enough to expose regressions but
+- **Small evaluation set.** Sixteen questions are enough to expose regressions but
   not to establish broad generalization, refusal calibration, or domain-independent
   retrieval quality.
 - **Single-process local operation.** There is no concurrent ingestion queue,

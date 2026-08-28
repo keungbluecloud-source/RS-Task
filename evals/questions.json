@@ -11,5 +11,8 @@
   {"id":"q10","category":"version_handling","question":"How should a later Roadmap web update be compared with the earlier AI RMF publication?","expected_sources":["nist-ai-rmf-roadmap.html","nist-ai-rmf-1.0.pdf"],"expected_points":["publication date","dynamic webpage","distinct claims"]},
   {"id":"q11","category":"out_of_scope","question":"What is the capital of France?","expected_sources":[],"expected_points":["refusal"]},
   {"id":"q12","category":"out_of_scope","question":"What remote-work equipment reimbursement does NIST provide to its employees?","expected_sources":[],"expected_points":["refusal"]},
-  {"id":"q13","category":"out_of_scope","question":"What is NVIDIA's current stock price?","expected_sources":[],"expected_points":["refusal"]}
+  {"id":"q13","category":"out_of_scope","question":"What is NVIDIA's current stock price?","expected_sources":[],"expected_points":["refusal"]},
+  {"id":"q14","category":"edge_empty_query","question":"","expected_sources":[],"expected_points":["validation error without retrieval or generation"],"expected_behavior":"validation_error"},
+  {"id":"q15","category":"edge_cross_document","question":"How do the AI RMF functions apply to generative-AI risks?","expected_sources":["nist-ai-rmf-1.0.pdf","nist-genai-profile.pdf"],"expected_points":["GOVERN, MAP, MEASURE, and MANAGE","GAI-specific risk considerations","distinguish framework from profile"],"expected_behavior":"answer"},
+  {"id":"q16","category":"edge_conflicting_sources","question":"The Playbook FAQ describes the AI RMF as currently in draft, while the AI RMF 1.0 PDF is a final January 2023 publication. How should these conflicting statements be reported?","expected_sources":["nist-ai-rmf-playbook-faq.html","nist-ai-rmf-1.0.pdf"],"expected_points":["report each statement separately","identify source and publication status","do not silently choose or merge the claims"],"expected_behavior":"answer_with_conflict"}
 ]

@@ -21,7 +21,9 @@
     ],
     "hit_at_5": true,
     "answer": "AI RMF Core functions should be carried out in a way that reflects diverse and multidisciplinary perspectives, potentially including the views of AI actors out- side the organization. [S1] The AI RMF will be published in January 2023 after additional public input, along with the first release of the NIST AI RMF Playbook covering all four AI RMF functions (Govern, Map, Measure, Manage). [S5] As illus- trated in Figure 5, the Core is composed of four functions: GOVERN, MAP, MEASURE, and MANAGE. [S1]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q02",
@@ -48,7 +50,9 @@
     ],
     "hit_at_5": true,
     "answer": "Both the AI RMF and the NIST AI RMF Playbook will be housed in a forthcoming NIST Trustworthy and Responsible AI Resource Center, along with other interactive materials, information, and resources for the community to utilize. [S3] Creating trustworthy AI requires balancing each of these characteristics based on the AI system’s context of use. [S1] This Framework articulates the following characteristics of trustworthy AI and offers guidance for addressing them. [S1]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q03",
@@ -70,7 +74,9 @@
     ],
     "hit_at_5": true,
     "answer": "The NIST AI RMF is a consensus-based resource intended for voluntary use in addressing risks in the design, development, use, and evaluation of AI systems. [S6] These tasks are carried out by AI actors who are responsible for operating the AI system and working with others to regularly assess system output and impacts. [S4] section_doc: ### Organizations can document the following - Who is ultimately responsible for the decisions of the AI and is this person aware of the intended uses and limitations of the analytic? [S2]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q04",
@@ -93,7 +99,9 @@
     ],
     "hit_at_5": true,
     "answer": "type: Govern title: GOVERN 1.1 category: GOVERN-1 description: Legal and regulatory requirements involving AI are understood, managed, and documented. [S2] These requirements are complex and may not be applicable or differ across applications and contexts. [S2] For example, AI system testing processes for bias measurement, such as disparate impact, are not applied uniformly within the legal context. [S2]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q05",
@@ -116,7 +124,9 @@
     ],
     "hit_at_5": true,
     "answer": "The AI RMF should allow for communication of AI risks across an organization, between organizations, with customers, and to the public at large. [S6] AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. [S2] An online companion resource to the AI RMF, the NIST AI RMF Playbook, is available to help organizations navigate the AI RMF and achieve its outcomes through suggested tactical actions they can apply within their own contexts. [S3]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q06",
@@ -139,7 +149,9 @@
     ],
     "hit_at_5": true,
     "answer": "After introducing and describing these risks, the document provides a set of suggested actions to help organizations govern, map, measure, and manage these risks. [S4] AI RMF profiles assist organizations in deciding how to best manage AI risks in a manner that is well-aligned with their goals, considers legal/regulatory requirements and best practices, and reflects risk management priorities. [S4] Transparency and accountability across organizations and processes is crucial to reducing AI risks. [S5]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q07",
@@ -162,7 +174,9 @@
     ],
     "hit_at_5": true,
     "answer": "The NIST AI RMF Playbook can help organizations cultivate an environment focused on AI risks, and transform how they approach the development, deployment, and use of trustworthy AI technology. [S1] An online companion resource to the AI RMF, the NIST AI RMF Playbook, is available to help organizations navigate the AI RMF and achieve its outcomes through suggested tactical actions they can apply within their own contexts. [S5] Along with the AI RMF, the Playbook is part of the NIST Trustworthy and Responsible AI Resource Center. [S5]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q08",
@@ -185,7 +199,9 @@
     ],
     "hit_at_5": true,
     "answer": "The inability to appropriately measure AI risks does not imply that an AI system necessarily poses either a high or low risk. [S2] Attention to governance is a continual and intrinsic requirement for effective AI risk management over an AI system’s lifespan and the organization’s hierarchy. [S1] GOVERN 2.1: Roles and responsibilities and lines of communi- cation related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization. [S6]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q09",
@@ -204,7 +220,9 @@
     ],
     "hit_at_5": true,
     "answer": "The selected knowledge base does not contain enough evidence to answer that question.",
-    "refused": true
+    "refused": true,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q10",
@@ -228,7 +246,9 @@
     ],
     "hit_at_5": true,
     "answer": "This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 Update Schedule and Versions The Artificial Intelligence Risk Management Framework (AI RMF) is intended to be a living document. [S1] This Roadmap identifies key activities for advancing the AI RMF that could be carried out by NIST in collaboration with private and public sector organizations – or by those organizations independently . [S2] NIST will review the content and usefulness of the Framework regularly to determine if an update is appro- priate; a review with formal input from the AI community is expected to take place no later than 2028. [S1]",
-    "refused": false
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q11",
@@ -247,7 +267,9 @@
     ],
     "hit_at_5": true,
     "answer": "The selected knowledge base does not contain enough evidence to answer that question.",
-    "refused": true
+    "refused": true,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q12",
@@ -266,7 +288,9 @@
     ],
     "hit_at_5": true,
     "answer": "The selected knowledge base does not contain enough evidence to answer that question.",
-    "refused": true
+    "refused": true,
+    "validation_error": null,
+    "behavior_pass": true
   },
   {
     "id": "q13",
@@ -285,6 +309,78 @@
     ],
     "hit_at_5": true,
     "answer": "The selected knowledge base does not contain enough evidence to answer that question.",
-    "refused": true
+    "refused": true,
+    "validation_error": null,
+    "behavior_pass": true
+  },
+  {
+    "id": "q14",
+    "category": "edge_empty_query",
+    "question": "",
+    "expected_sources": [],
+    "expected_points": [
+      "validation error without retrieval or generation"
+    ],
+    "expected_behavior": "validation_error",
+    "retrieved_sources": [],
+    "hit_at_5": true,
+    "answer": "",
+    "refused": false,
+    "validation_error": "Query must not be empty",
+    "behavior_pass": true
+  },
+  {
+    "id": "q15",
+    "category": "edge_cross_document",
+    "question": "How do the AI RMF functions apply to generative-AI risks?",
+    "expected_sources": [
+      "nist-ai-rmf-1.0.pdf",
+      "nist-genai-profile.pdf"
+    ],
+    "expected_points": [
+      "GOVERN, MAP, MEASURE, and MANAGE",
+      "GAI-specific risk considerations",
+      "distinguish framework from profile"
+    ],
+    "expected_behavior": "answer",
+    "retrieved_sources": [
+      "nist-ai-rmf-1.0.pdf",
+      "nist-ai-rmf-1.0.pdf",
+      "nist-genai-profile.pdf",
+      "nist-ai-rmf-playbook-faq.html",
+      "nist-ai-rmf-playbook-faq.html"
+    ],
+    "hit_at_5": true,
+    "answer": "- Guidance related to explainability and interpretability, and how to apply that guidance within the AI RMF. [S6] AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. [S2] An online companion resource to the AI RMF, the NIST AI RMF Playbook, is available to help organizations navigate the AI RMF and achieve its outcomes through suggested tactical actions they can apply within their own contexts. [S1]",
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
+  },
+  {
+    "id": "q16",
+    "category": "edge_conflicting_sources",
+    "question": "The Playbook FAQ describes the AI RMF as currently in draft, while the AI RMF 1.0 PDF is a final January 2023 publication. How should these conflicting statements be reported?",
+    "expected_sources": [
+      "nist-ai-rmf-playbook-faq.html",
+      "nist-ai-rmf-1.0.pdf"
+    ],
+    "expected_points": [
+      "report each statement separately",
+      "identify source and publication status",
+      "do not silently choose or merge the claims"
+    ],
+    "expected_behavior": "answer_with_conflict",
+    "retrieved_sources": [
+      "nist-ai-rmf-playbook-faq.html",
+      "nist-ai-rmf-playbook-faq.html",
+      "nist-ai-rmf-1.0.pdf",
+      "nist-genai-profile.pdf",
+      "nist-ai-rmf-1.0.pdf"
+    ],
+    "hit_at_5": true,
+    "answer": "Currently in draft, the AI RMF describes why a risk management framework for AI is important, and explains the motivation for using the Framework, its scope, audience, and the framing of AI risk and trustworthiness. [S1] Introduction This document is a cross-sectoral profile of and companion resource for the AI Risk Management Framework (AI RMF 1.0) for Generative AI, 1 pursuant to President Biden’s Executive Order (EO) 14110 on Safe, Secure, and Trustworthy Artificial Intelligence.2 The AI RMF was released in January 2023, and is intended for voluntary use and to improve the ability of organizations to incorporate trustworthiness considerations into the design, development, use, and evaluation of AI products, services, and systems. [S4] The AI RMF will be published in January 2023 after additional public input, along with the first release of the NIST AI RMF Playbook covering all four AI RMF functions (Govern, Map, Measure, Manage). [S2]",
+    "refused": false,
+    "validation_error": null,
+    "behavior_pass": true
   }
 ]
