@@ -1,0 +1,12 @@
+[
+  {"id":"q01","category":"single_document","question":"What are the four AI RMF Core functions?","expected_sources":["nist-ai-rmf-1.0.pdf"],"expected_points":["GOVERN","MAP","MEASURE","MANAGE"]},
+  {"id":"q02","category":"single_document","question":"What characteristics define trustworthy AI in the AI RMF?","expected_sources":["nist-ai-rmf-1.0.pdf"],"expected_points":["valid and reliable","safe","secure and resilient","accountable and transparent","explainable and interpretable","privacy-enhanced","fair with harmful bias managed"]},
+  {"id":"q03","category":"single_document","question":"Who are the intended audiences for the AI RMF?","expected_sources":["nist-ai-rmf-1.0.pdf"],"expected_points":["AI actors","organizations"]},
+  {"id":"q04","category":"exact_identifier","question":"What actions are suggested under GOVERN 1.1?","expected_sources":["nist-ai-rmf-playbook.json"],"expected_points":["legal and regulatory considerations","align risk management","staff training"]},
+  {"id":"q05","category":"cross_document","question":"How do the AI RMF functions apply to generative AI risks?","expected_sources":["nist-ai-rmf-1.0.pdf","nist-genai-profile.pdf"],"expected_points":["core functions","generative AI considerations"]},
+  {"id":"q06","category":"cross_document","question":"How should organizations govern generative AI risks and measure them?","expected_sources":["nist-ai-rmf-1.0.pdf","nist-genai-profile.pdf"],"expected_points":["GOVERN","MEASURE"]},
+  {"id":"q07","category":"comparison","question":"How do the AI RMF and its Playbook differ?","expected_sources":["nist-ai-rmf-1.0.pdf","nist-ai-rmf-playbook.json"],"expected_points":["framework","suggested actions"]},
+  {"id":"q08","category":"multi_hop","question":"How does identifying and measuring an AI risk lead to managing it?","expected_sources":["nist-ai-rmf-1.0.pdf"],"expected_points":["MAP","MEASURE","MANAGE"]},
+  {"id":"q09","category":"out_of_scope","question":"What paid-leave policy does NIST recommend for AI developers?","expected_sources":[],"expected_points":["refusal"]},
+  {"id":"q10","category":"version_handling","question":"How should a later Roadmap web update be compared with the earlier AI RMF publication?","expected_sources":["nist-ai-rmf-roadmap.html","nist-ai-rmf-1.0.pdf"],"expected_points":["publication date","dynamic webpage","distinct claims"]}
+]

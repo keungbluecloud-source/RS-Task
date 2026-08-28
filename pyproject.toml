@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nist-rag"
+version = "0.1.0"
+description = "A citation-first RAG CLI for arbitrary local document folders"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["pypdf>=4"]
+semantic = ["sentence-transformers>=3", "numpy>=1.24"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+nist-rag = "nist_rag.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
