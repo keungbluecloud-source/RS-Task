@@ -29,6 +29,12 @@ python3 -m unittest discover -s tests -v
 python3 scripts/evaluate.py
 ```
 
+`evals/results.json` is the recorded answer set produced by the system's deterministic
+extractive backend. Each record includes the question, retrieved sources, actual
+answer or validation error, refusal flag, backend, and the document/page/section plus
+excerpt for every cited source. This keeps evaluation reproducible without API keys
+or LLM token spend.
+
 Re-running `ingest` hashes every supported file and re-parses only new or changed content. It also removes chunks for files no longer present. The application stores manifests and indexes under `data/knowledge_bases/`; it never copies, modifies, or deletes source documents. `delete` removes only the application-owned knowledge-base index.
 
 The legacy explicit-index workflow remains available for scripts:

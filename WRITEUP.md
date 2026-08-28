@@ -230,6 +230,12 @@ including both required sources for the cross-document and version-handling case
 All four out-of-scope questions were refused. This result establishes source recall
 and basic refusal behavior for this small labeled set; it does not establish that
 every generated sentence is correct.
+
+`evals/results.json` is also the committed system answer set: it contains 15 actual
+answers (including four explicit refusals) and one empty-query validation result.
+Every cited answer records its backend and cited document, page or section, and
+supporting excerpt. An audit verifies that the stored citation records exactly match
+the inline `[S#]` IDs.
 The recorded extractive answers expose quality weaknesses, including awkward PDF
 line-break artifacts and selecting related rather than directly responsive sentences.
 
