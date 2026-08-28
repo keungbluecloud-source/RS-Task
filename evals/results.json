@@ -203,7 +203,7 @@
       "nist-ai-rmf-playbook.json"
     ],
     "hit_at_5": true,
-    "answer": "The provided NIST corpus does not contain enough evidence to answer that question.",
+    "answer": "The selected knowledge base does not contain enough evidence to answer that question.",
     "refused": true
   },
   {
@@ -229,5 +229,62 @@
     "hit_at_5": true,
     "answer": "This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 Update Schedule and Versions The Artificial Intelligence Risk Management Framework (AI RMF) is intended to be a living document. [S1] This Roadmap identifies key activities for advancing the AI RMF that could be carried out by NIST in collaboration with private and public sector organizations – or by those organizations independently . [S2] NIST will review the content and usefulness of the Framework regularly to determine if an update is appro- priate; a review with formal input from the AI community is expected to take place no later than 2028. [S1]",
     "refused": false
+  },
+  {
+    "id": "q11",
+    "category": "out_of_scope",
+    "question": "What is the capital of France?",
+    "expected_sources": [],
+    "expected_points": [
+      "refusal"
+    ],
+    "retrieved_sources": [
+      "nist-ai-rmf-playbook.json",
+      "nist-ai-rmf-playbook.json",
+      "nist-ai-rmf-playbook.json",
+      "nist-ai-rmf-playbook.json",
+      "nist-ai-rmf-playbook.json"
+    ],
+    "hit_at_5": true,
+    "answer": "The selected knowledge base does not contain enough evidence to answer that question.",
+    "refused": true
+  },
+  {
+    "id": "q12",
+    "category": "out_of_scope",
+    "question": "What remote-work equipment reimbursement does NIST provide to its employees?",
+    "expected_sources": [],
+    "expected_points": [
+      "refusal"
+    ],
+    "retrieved_sources": [
+      "nist-ai-rmf-playbook-faq.html",
+      "nist-genai-profile.pdf",
+      "nist-ai-rmf-playbook.json",
+      "nist-ai-rmf-1.0.pdf",
+      "nist-ai-rmf-playbook.json"
+    ],
+    "hit_at_5": true,
+    "answer": "The selected knowledge base does not contain enough evidence to answer that question.",
+    "refused": true
+  },
+  {
+    "id": "q13",
+    "category": "out_of_scope",
+    "question": "What is NVIDIA's current stock price?",
+    "expected_sources": [],
+    "expected_points": [
+      "refusal"
+    ],
+    "retrieved_sources": [
+      "nist-genai-profile.pdf",
+      "nist-ai-rmf-playbook.json",
+      "nist-ai-rmf-playbook.json",
+      "nist-genai-profile.pdf",
+      "nist-ai-rmf-playbook.json"
+    ],
+    "hit_at_5": true,
+    "answer": "The selected knowledge base does not contain enough evidence to answer that question.",
+    "refused": true
   }
 ]

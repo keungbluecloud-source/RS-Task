@@ -122,7 +122,7 @@ Page and section metadata are stored on chunks before retrieval. The LLM therefo
 never has to invent a page number. Citation locations are application data, not model
 claims.
 
-## Retrieval decisions
+## Embedding and retrieval choices
 
 Retrieval combines BM25 with a dependency-free hashed vector over unigrams and
 bigrams. BM25 is important for framework identifiers such as `GOVERN 1.1`, acronyms,
@@ -209,7 +209,8 @@ internet users.
 
 ## Evaluation
 
-The ten-question NIST evaluation set was written across these categories:
+The NIST evaluation set began with ten questions and now contains thirteen after
+adding three additional out-of-scope refusal cases:
 
 | Category | Count |
 | --- | ---: |
@@ -218,13 +219,14 @@ The ten-question NIST evaluation set was written across these categories:
 | Cross-document synthesis | 2 |
 | Document comparison | 1 |
 | Multi-hop reasoning | 1 |
-| Out of scope | 1 |
+| Out of scope | 4 |
 | Version handling | 1 |
 
-The recorded deterministic run achieved expected-source Hit@5 on 10/10 questions,
+The recorded deterministic run achieved expected-source Hit@5 on 13/13 questions,
 including both required sources for the cross-document and version-handling cases.
-The out-of-scope question was refused. This result establishes source recall for this
-small labeled set; it does not establish that every generated sentence is correct.
+All four out-of-scope questions were refused. This result establishes source recall
+and basic refusal behavior for this small labeled set; it does not establish that
+every generated sentence is correct.
 The recorded extractive answers expose quality weaknesses, including awkward PDF
 line-break artifacts and selecting related rather than directly responsive sentences.
 
@@ -237,7 +239,7 @@ so the suite is deterministic and does not consume API tokens.
 
 Evaluation limitations:
 
-- ten questions are too few to establish broad retrieval quality;
+- thirteen questions are too few to establish broad retrieval quality;
 - Hit@5 does not measure ranking quality below the cutoff;
 - expected answer points are not yet scored automatically;
 - citation support is not judged by an entailment model or human double review; and
@@ -289,12 +291,65 @@ In priority order:
    evaluation artifact.
 8. Run parsers under explicit time and memory limits for hostile-file containment.
 
-## Scaling beyond the take-home
+## Known limitations
+
+The current implementation has several deliberate and observed limitations:
+
+- **No learned embedding model.** The vector ranking uses hashed unigrams and
+  bigrams. It is reproducible and dependency-free, but weak on synonyms and genuine
+  semantic paraphrases.
+- **No cross-encoder reranker.** RRF combines lexical and vector ranks, but it does not
+  perform query–chunk relevance classification over the final candidates.
+- **Not a production vector database.** Chunks and index data are persisted as JSON
+  and materialized in process. This is transparent at take-home scale but inefficient
+  for large, concurrent workloads.
+- **Heuristic refusal calibration.** Evidence sufficiency uses lexical coverage and a
+  fixed score threshold calibrated on a small NIST evaluation set. Another document
+  domain may require different thresholds.
+- **Citation validation is structural.** The validator proves that `[S#]` exists in
+  the supplied context, not that every cited source semantically entails its claim.
+- **Basic PDF extraction.** Complex tables, multi-column layouts, scans, and unusual
+  encodings can produce poor text or require OCR. Extracted prose can retain broken
+  line-wrap artifacts.
+- **Generic JSON flattening.** Field paths are preserved, but arbitrary nested JSON
+  may be divided at boundaries that are syntactically convenient rather than
+  semantically ideal.
+- **Limited adversarial-file containment.** File signatures, size limits, symbolic
+  links, and malformed inputs are handled, but parsers do not yet run in isolated
+  workers with strict CPU and memory quotas.
+- **Small evaluation set.** Thirteen questions are enough to expose regressions but
+  not to establish broad generalization, refusal calibration, or domain-independent
+  retrieval quality.
+- **Single-process local operation.** There is no concurrent ingestion queue,
+  authentication layer, tenant authorization service, or distributed observability.
+
+These limitations are intentionally documented because a working answer path alone
+does not demonstrate production readiness.
+
+## Scaling to 10× document volume
 
 At roughly ten times the current corpus size, the in-process BM25 structures and JSON
 snapshot remain usable, but startup, full index materialization, and manifest size
 grow linearly. I would first stop storing duplicate chunk payloads in both manifest
-and index, persist lexical statistics separately, and batch embedding work.
+and index, persist lexical statistics separately, batch embedding work, and measure
+memory, ingestion latency, query latency, and index size before changing storage
+systems. Incremental hashing and changed-file parsing already avoid reprocessing the
+entire source folder, so the first likely bottlenecks are index materialization and
+query-time scoring over every chunk.
+
+At 10× volume I would specifically:
+
+- replace the JSON manifest's embedded chunk copies with document metadata and chunk
+  references;
+- persist the learned embedding model name and version with the index;
+- batch document embedding and avoid loading all vectors into Python dictionaries;
+- add a cross-encoder only over a bounded fused candidate set;
+- collect p50/p95 ingestion and query latency before introducing distributed
+  services; and
+- retain the current CLI and knowledge-base contract so storage changes do not alter
+  the user workflow.
+
+## Scaling to 10,000 documents
 
 At 10,000 documents, I would:
 

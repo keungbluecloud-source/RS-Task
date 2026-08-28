@@ -8,5 +8,8 @@
   {"id":"q07","category":"comparison","question":"How do the AI RMF and its Playbook differ?","expected_sources":["nist-ai-rmf-1.0.pdf","nist-ai-rmf-playbook.json"],"expected_points":["framework","suggested actions"]},
   {"id":"q08","category":"multi_hop","question":"How does identifying and measuring an AI risk lead to managing it?","expected_sources":["nist-ai-rmf-1.0.pdf"],"expected_points":["MAP","MEASURE","MANAGE"]},
   {"id":"q09","category":"out_of_scope","question":"What paid-leave policy does NIST recommend for AI developers?","expected_sources":[],"expected_points":["refusal"]},
-  {"id":"q10","category":"version_handling","question":"How should a later Roadmap web update be compared with the earlier AI RMF publication?","expected_sources":["nist-ai-rmf-roadmap.html","nist-ai-rmf-1.0.pdf"],"expected_points":["publication date","dynamic webpage","distinct claims"]}
+  {"id":"q10","category":"version_handling","question":"How should a later Roadmap web update be compared with the earlier AI RMF publication?","expected_sources":["nist-ai-rmf-roadmap.html","nist-ai-rmf-1.0.pdf"],"expected_points":["publication date","dynamic webpage","distinct claims"]},
+  {"id":"q11","category":"out_of_scope","question":"What is the capital of France?","expected_sources":[],"expected_points":["refusal"]},
+  {"id":"q12","category":"out_of_scope","question":"What remote-work equipment reimbursement does NIST provide to its employees?","expected_sources":[],"expected_points":["refusal"]},
+  {"id":"q13","category":"out_of_scope","question":"What is NVIDIA's current stock price?","expected_sources":[],"expected_points":["refusal"]}
 ]
